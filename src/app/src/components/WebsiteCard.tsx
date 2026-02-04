@@ -1,4 +1,5 @@
 import { ExternalLink, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import type { AIWebsite } from '@/data/aiWebsites';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -67,11 +68,21 @@ export function WebsiteCard({ website }: WebsiteCardProps) {
         </div>
       </CardContent>
       
-      <CardFooter className="pt-0">
+      <CardFooter className="pt-0 gap-2">
         <Button
           variant="outline"
           size="sm"
-          className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+          className="flex-1 group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+          asChild
+        >
+          <Link to={`/tool/${website.id}`} className="flex items-center justify-center gap-2">
+            <span>詳細資訊</span>
+          </Link>
+        </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="flex-1 group-hover:text-primary transition-colors"
           asChild
         >
           <a
@@ -80,7 +91,7 @@ export function WebsiteCard({ website }: WebsiteCardProps) {
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2"
           >
-            <span>訪問網站</span>
+            <span>訪問</span>
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </Button>
