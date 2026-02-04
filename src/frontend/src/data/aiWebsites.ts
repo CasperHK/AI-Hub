@@ -194,6 +194,15 @@ export const aiWebsites: AIWebsite[] = [
     pricing: '免費增值',
   },
   {
+    id: 'dify',
+    name: 'Dify',
+    description: 'Dify 提供您所需的一切——代理工作流程、RAG 管道、整合和可觀測性——所有這些都集中在一個地方，讓您掌握 AI 的力量。',
+    url: 'https://dify.ai/',
+    category: 'productivity',
+    tags: ['Google', '多模態', '推理'],
+    pricing: '免費增值',
+  },
+  {
     id: 'jasper',
     name: 'Jasper',
     description: '專注於行銷文案、部落格文章和品牌語調的 AI 寫作助手。',
